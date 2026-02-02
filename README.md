@@ -35,6 +35,13 @@ pip install -e .
 ### 4. Bluetooth (Chrome)
 Enable "Experimental Web Platform features" in `chrome://flags/` to use the web-based Pybricks tools.
 
+### 5. Troubleshooting
+**Weights & Biases (WandB) API Key**:
+If you receive an error about your API key length (86 chars vs 40 chars) when logging in, run this before running your scripts:
+```bash
+export WANDB_API_KEY=your_long_key_here
+```
+
 ## Usage
 ### Client 
 Update your client script on the [Pybricks Hub](https://beta.pybricks.com/) whenever you want to run a new environment with your robot.
