@@ -6,8 +6,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         "pybricksdev",
-        "tensordict==0.5.0",
-        "torchrl==0.5.0",
+        # "tensordict==0.5.0",  # Managed in requirements.txt (requires --no-deps)
+        # "torchrl==0.5.0",     # Managed in requirements.txt (requires --no-deps)
         "hydra-core==1.3.2",
         "wandb==0.16.1",
         "opencv-python==4.9.0.80",

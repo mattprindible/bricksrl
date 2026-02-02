@@ -142,3 +142,8 @@ outputs/
 # dev tools
 pytest.ini
 .pre-commit-config.yaml
+
+# Local experiments
+attempt*
+wandb/
+

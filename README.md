@@ -14,51 +14,26 @@ For additional information and building instructions for the robots, view the pr
 
 
 
-## Prerequisites
-<details>
-  <summary>Click me</summary>
+## Installation
+### 1. Set up Conda Environment
+```bash
+conda env create -f environment.yml
+conda activate bricksrl
+```
 
-### Enable web Bluetooth on chrome
+### 2. Install Dependencies
+**Critical**: We use specific pinned versions to support Apple Silicon and older TorchRL versions. Install exactly as shown:
+```bash
+pip install --no-deps -r requirements.txt
+```
 
- 1. Go to "chrome://flags/" 
- 2. enable "Experimental Web Platform features"
- 3. restart chrome
- 4. Use beta.pybricks.com to edit and upload the client scripts for each environment
+### 3. Install BricksRL
+```bash
+pip install -e .
+```
 
-### Environment Setup
-
-1. **Create a Conda environment:**
-   ```bash
-   conda create --name bricksrl python=3.8
-    ```
-2. **Activate the environment:**
-   ```bash
-   conda activate bricksrl
-    ```
-3. **Install PyTorch:**
-   ```bash
-   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-    ```
-4. **Install bricksrl and additional packages:**
-   For regular users, install the package and all required dependencies by running:
-   ```bash
-   pip install -e .
-    ```
-
-   This will install the bricksrl package along with the dependencies listed in setup.py.
-
-5. **(Optional) Install development tools:**
-
-   If you are a developer and need to install development tools (e.g., pytest, ufmt, pre-commit), use the following command to install them as extras:
-
-   ```bash
-   pip install -e .[dev]
-   ```
-   This will install the development dependencies defined in the setup.py file along with the package.
-
-
-</details>
+### 4. Bluetooth (Chrome)
+Enable "Experimental Web Platform features" in `chrome://flags/` to use the web-based Pybricks tools.
 
 ## Usage
 ### Client 
